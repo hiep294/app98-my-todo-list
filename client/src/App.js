@@ -39,20 +39,23 @@ class App extends React.Component {
       <div className="App">
         <div className="container">
           <h2 className="todos-title">Todos Module</h2>
-          <div className="filter">
-            <button type="button" value="all" className="m-1 btn btn-secondary" onClick={this.fetchTodos}
-              style={filter === FETCH_TODOS ? clearStyle : null}
-            >All todos</button>
+          <div className="filter" style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div>
+              <button type="button" value="all" className="m-1 btn btn-secondary" onClick={this.fetchTodos}
+                style={filter === FETCH_TODOS ? clearStyle : null}
+              >All todos</button>
 
-            <button className="m-1 btn btn-secondary" value="active"
-              onClick={this.fetchTodosActive}
-              style={filter === FETCH_TODOS_ACTIVE ? clearStyle : null}
-            >Active</button>
+              <button className="m-1 btn btn-secondary" value="active"
+                onClick={this.fetchTodosActive}
+                style={filter === FETCH_TODOS_ACTIVE ? clearStyle : null}
+              >Active</button>
 
-            <button className="m-1 btn btn-secondary" value="completed"
-              onClick={this.fetchTodosCompleted}
-              style={filter === FETCH_TODOS_COMPLETED ? clearStyle : null}
-            >Completed</button>
+              <button className="m-1 btn btn-secondary" value="completed"
+                onClick={this.fetchTodosCompleted}
+                style={filter === FETCH_TODOS_COMPLETED ? clearStyle : null}
+              >Completed</button>
+            </div>
+            <a className="nav-link" href="https://github.com/hiep294/app98-my-todo-list">Github</a>
           </div>
           <hr />
           <div className="row">
